@@ -9,7 +9,6 @@
 //! Memory Allocation Services of Boot Service
 //!
 
-use core::intrinsics::mir::Return;
 
 use super::EfiBootServices;
 

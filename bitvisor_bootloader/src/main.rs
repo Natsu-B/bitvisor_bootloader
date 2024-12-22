@@ -163,7 +163,7 @@ extern "C" fn efi_main(image_handle: EfiHandle, system_table: *mut EfiSystemTabl
         &bitvisor_disconnect_info as *const BitVisorDisconnectController as *const usize;
     system_info_pointers[2] = &acpi_table as *const AcpiTable as *const usize;
     system_info_pointers[3] = match dtb_address {
-        Some(_) => null(), //&dtb_table as *const DtbTable as *const usize,
+        Some(_) => &dtb_table as *const DtbTable as *const usize,
         None => core::ptr::null(),
     };
     system_info_pointers[4] = core::ptr::null();
