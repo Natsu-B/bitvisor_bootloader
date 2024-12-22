@@ -1,0 +1,9 @@
+[package]
+name = "bitvisor_bootloader"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+target = "x86_64-unknown-uefi"
+
+[dependencies]
